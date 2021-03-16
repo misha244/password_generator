@@ -1,5 +1,5 @@
 // Assignment Code
-var generateBtn = Wouldcument.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 // Declaring global variables
 
 const lowercaseArray = [
@@ -59,7 +59,7 @@ const uppercaseArray = [
   "Z",
 ];
 const numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const specialcaseArray = [
+const specialCharacterArray = [
   "!",
   '"',
   "#",
@@ -93,38 +93,39 @@ const specialcaseArray = [
   "~",
   '"',
 ];
+let isLowercase;
+let isUppercase;
+let isNumbers;
+let isSpecialCharacter;
+let passwordLength;
+let password = "";
 
-// Prompt the user and accept the value for password length and store in variable;
+function generatePassword() {
+  // Create a variable to store our generated password
+  var password = "";
+  // Asking for a password length
+  const passwordLength = prompt(
+    "Please enter the length you'd like for your password"
+  );
+  // Converting user input from string to an integer
+  passwordLength = Number.parseInt(passwordLength);
+  // Validating password length
+  const validatePasswordLength = () => {
+    if (passwordLength >= 8 && passwordLength <= 128) {
+      alert("Thank you. Please proceed");
+    } else {
+      alert(
+        "Please try again and enter a password length that is between 8 and 128!"
+      );
+      break;
+    }
+  };
 
-// if password length is greater than or equal to 8 and password length is less
-// const passwordLength = prompt("What is your password length?");
-
-// prompt returns a string value eg. 8 is actually "8"
-
-// before if convert string to number Number.parseInt()
-
-// if TRUE then ask for all 4 requirements using confirm and store each variable
-
-// Validating password length
-
-const passwordLength = prompt(
-  "Please enter the length you'd like for your password"
-);
-const validatePasswordLength = () => {
-  if (passwordLength >= 8 && passwordLength <= 128) {
-    alert("Thank you. Please proceed");
-  } else {
-    alert("Please enter a password length between 8 and 128!");
-    break;
-  }
-};
-
-// Validating character choices
-if (condition) {
+  // Defining case selection variables
   const isLowercase = confirm(
     "Would you like your password to include lowercase?"
   );
-  const isUpperCase = confirm(
+  const isUppercase = confirm(
     "Would you like your password to include uppercase?"
   );
   const isNumbers = confirm("Would you like your password to include numbers?");
@@ -132,36 +133,13 @@ if (condition) {
     "Would you like your password to include special characters?"
   );
 
-  const optionsArray = [["a", "b", "c", "d"][("A", "B", "C", "D")]];
-  const generatePassword = function () {};
-
-  if (isLowercase) {
-    optionsArray.push(lowercaseArray);
-  } else if (isUpperCase) {
-    optionsArray.push(uppercaseArray);
-  } else if (isNumbers) {
-    optionsArray.push(numbersArray);
-  } else {
-    optionsArray.push(specialcaseArray);
-  }
-
-  //get ranWouldm index of options array (0, 1)
-
-  //get the array from the optionsArray[ranWouldmIndex]
-
-  //from that array get another ranWouldm number nbetween 0 and the length of that array
-
-  // get the ranWouldm character from that array array[3] -> d
-
-  //repeat this loop 8 times
-} else {
-  alert();
+  // Return our created password
+  return password;
 }
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = Wouldcument.querySelector("#password");
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
