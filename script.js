@@ -106,11 +106,16 @@ const specialcaseArray = [
 // if TRUE then ask for all 4 requirements using confirm and store each variable
 
 // Validating password length
+
+const passwordLength = prompt(
+  "Please enter the length you'd like for your password"
+);
 const validatePasswordLength = () => {
   if (passwordLength >= 8 && passwordLength <= 128) {
     alert("Thank you. Please proceed");
   } else {
     alert("Please enter a password length between 8 and 128!");
+    break;
   }
 };
 
