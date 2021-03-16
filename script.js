@@ -121,7 +121,7 @@ function generatePassword() {
     }
   };
 
-  // Defining case selection variables
+  // Declaring case selection variables
   const isLowercase = confirm(
     "Would you like your password to include lowercase?"
   );
