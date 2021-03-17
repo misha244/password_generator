@@ -143,6 +143,9 @@ function generatePassword() {
     return "Try again and choose 1 or more character types.";
   }
 
+  // Creating the password by picking random characters out of the arrays the user has chosen
+  // Will use math function to do so
+
   // Return our created password
   return password;
 }
