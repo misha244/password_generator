@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// Declaring global variables
 
+// Declaring global variables
 const lowercaseArray = [
   "a",
   "b",
@@ -93,35 +93,26 @@ const specialCharacterArray = [
   "~",
   '"',
 ];
-let isLowercase;
-let isUppercase;
-let isNumbers;
-let isSpecialCharacter;
-let passwordLength;
-let password = "";
 
 function generatePassword() {
   // Create a variable to store our generated password
   var password = "";
+
   // Asking for a password length
-  const passwordLength = prompt(
+  const inputPasswordLength = prompt(
     "Please enter the length you'd like for your password"
   );
-  // Converting user input from string to an integer
-  passwordLength = Number.parseInt(passwordLength);
-  // Validating password length
-  const validatePasswordLength = () => {
-    if (passwordLength >= 8 && passwordLength <= 128) {
-      alert("Thank you. Please proceed");
-    } else {
-      alert(
-        "Please try again and enter a password length that is between 8 and 128!"
-      );
-      break;
-    }
-  };
 
-  // Declaring case selection variables
+  // Converting the input length from a string to an integer
+  const passwordLength = parseInt(inputPasswordLength, 10);
+
+  // Validating password length
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Your password length shoud be between 8 and 128 characters!");
+    return (password = "Try again and enter a valid password length!");
+  }
+
+  // Confirming character type selection
   const isLowercase = confirm(
     "Would you like your password to include lowercase?"
   );
@@ -129,13 +120,33 @@ function generatePassword() {
     "Would you like your password to include uppercase?"
   );
   const isNumbers = confirm("Would you like your password to include numbers?");
-  const isLowercase = confirm(
+  const isSpecialCharacter = confirm(
     "Would you like your password to include special characters?"
   );
+
+  // Collecting user preferences
+  const optionsArray = [];
+
+  if (isLowercase) {
+    optionsArray.push(lowercaseArray);
+  } else if (isUppercase) {
+    optionsArray.push(uppercaseArray);
+  } else if (isNumbers) {
+    optionsArray.push(numbersArray);
+  } else {
+    optionsArray.push(specialCharacterArray);
+  }
+
+  // Ensuring at least one type of character is chosen
+  if (!isLowercase && !isUppercase && !isNumbers && !isSpecialCharacter) {
+    alert("At least one character type is required to generate a password!");
+    return "Try again and choose 1 or more character types.";
+  }
 
   // Return our created password
   return password;
 }
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
