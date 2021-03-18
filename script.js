@@ -96,7 +96,7 @@ const specialCharacterArray = [
 
 function generatePassword() {
   // Create a variable to store our generated password
-  const password = "";
+  var password = "";
 
   // Asking for a password length
   const inputPasswordLength = prompt(
