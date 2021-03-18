@@ -129,11 +129,14 @@ function generatePassword() {
 
   if (isLowercase) {
     optionsArray.push(lowercaseArray);
-  } else if (isUppercase) {
+  }
+  if (isUppercase) {
     optionsArray.push(uppercaseArray);
-  } else if (isNumbers) {
+  }
+  if (isNumbers) {
     optionsArray.push(numbersArray);
-  } else {
+  }
+  if (isSpecialCharacter) {
     optionsArray.push(specialCharacterArray);
   }
 
