@@ -145,10 +145,8 @@ function generatePassword() {
   confirmPreference(isNumbers, numbersArray);
   confirmPreference(isSpecialCharacter, specialCharacterArray);
 
-  // Creating the password by picking random characters out of the arrays the user has chosen
-  // Will use math function to do so
-  // Creating a loop that will generate characters from the chosen arrays,
-  // using the chosen length for the password.
+  // Creating the password by picking random characters out of the chosen arrays
+  // Creating a loop that will generate characters from the chosen arrays, using the chosen length for the password.
 
   for (let i = 0; i <= passwordLength; i++) {
     password += optionsArray[Math.floor(Math.random() * optionsArray.length)];
