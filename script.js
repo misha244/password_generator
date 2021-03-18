@@ -127,18 +127,25 @@ function generatePassword() {
   // Collecting user preferences
   const optionsArray = [];
 
-  if (isLowercase) {
-    optionsArray.push(lowercaseArray);
-  }
-  if (isUppercase) {
-    optionsArray.push(uppercaseArray);
-  }
-  if (isNumbers) {
-    optionsArray.push(numbersArray);
-  }
-  if (isSpecialCharacter) {
-    optionsArray.push(specialCharacterArray);
-  }
+  const confirmPreference = () => {
+    if (isLowercase) {
+      optionsArray.push(lowercaseArray);
+    }
+    if (isUppercase) {
+      optionsArray.push(uppercaseArray);
+    }
+    if (isNumbers) {
+      optionsArray.push(numbersArray);
+    }
+    if (isSpecialCharacter) {
+      optionsArray.push(specialCharacterArray);
+    }
+  };
+
+  confirmPreference(isLowercase, lowercaseArray);
+  confirmPreference(isUppercase, uppercaseArray);
+  confirmPreference(isNumbers, numbersArray);
+  confirmPreference(isSpecialCharacter, specialCharacterArray);
 
   // Ensuring at least one type of character is chosen
   if (!isLowercase && !isUppercase && !isNumbers && !isSpecialCharacter) {
