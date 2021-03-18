@@ -149,7 +149,7 @@ function generatePassword() {
   // using the chosen length for the password.
 
   for (let i = 0; i <= passwordLength; i++) {}
-  password += optionsArray[Math.floor(Math.random() * passwordLength)];
+  password += optionsArray[Math.floor(Math.random() * optionsArray.length)];
 
   // Return our created password
   return password;
@@ -157,8 +157,8 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  const password = generatePassword();
-  const passwordText = document.querySelector("#password");
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
