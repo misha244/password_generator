@@ -151,9 +151,9 @@ function generatePassword() {
   // Creating a loop that will generate characters from the chosen arrays,
   // using the chosen length for the password.
 
-  for (let i = 0; i <= passwordLength; i++) {}
-  password += optionsArray[Math.floor(Math.random() * optionsArray.length)];
-
+  for (let i = 0; i <= passwordLength; i++) {
+    password += optionsArray[Math.floor(Math.random() * optionsArray.length)];
+  }
   // Return our created password
   return password;
 }
