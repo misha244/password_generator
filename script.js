@@ -135,7 +135,7 @@ function generatePassword() {
 
   const confirmPreference = (answer, array) => {
     if (answer) {
-      optionsArray.push(array);
+      optionsArray.push(...array);
       return;
     }
   };
