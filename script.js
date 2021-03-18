@@ -145,6 +145,14 @@ function generatePassword() {
 
   // Creating the password by picking random characters out of the arrays the user has chosen
   // Will use math function to do so
+  // Creating a loop that will generate characters from the chosen arrays,
+  // using the chosen length for the password.
+
+  for (let i = 0; i < passwordLength; i++) {
+    password +=
+
+
+  }
 
   // Return our created password
   return password;
