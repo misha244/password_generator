@@ -1,5 +1,5 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
 // Declaring global variables
 const lowercaseArray = [
@@ -96,7 +96,7 @@ const specialCharacterArray = [
 
 function generatePassword() {
   // Create a variable to store our generated password
-  var password = "";
+  const password = "";
 
   // Asking for a password length
   const inputPasswordLength = prompt(
@@ -157,8 +157,8 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  const password = generatePassword();
+  const passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
