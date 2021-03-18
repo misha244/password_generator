@@ -107,7 +107,7 @@ function generatePassword() {
   const passwordLength = parseInt(inputPasswordLength, 10);
 
   // Validating password length
-  if (passwordLength < 8 || passwordLength > 128) {
+  if (passwordLength < 8 || passwordLength > 128 || !passwordLength) {
     alert("Your password length shoud be between 8 and 128 characters!");
     return (password = "Try again and enter a valid password length!");
   }
