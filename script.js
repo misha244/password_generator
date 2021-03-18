@@ -124,21 +124,19 @@ function generatePassword() {
     "Would you like your password to include special characters?"
   );
 
+  // Ensuring at least one type of character is chosen
+  if (!isLowercase && !isUppercase && !isNumbers && !isSpecialCharacter) {
+    alert("At least one character type is required to generate a password!");
+    return "Try again and choose 1 or more character types.";
+  }
+
   // Collecting user preferences
   const optionsArray = [];
 
-  const confirmPreference = () => {
-    if (isLowercase) {
-      optionsArray.push(lowercaseArray);
-    }
-    if (isUppercase) {
-      optionsArray.push(uppercaseArray);
-    }
-    if (isNumbers) {
-      optionsArray.push(numbersArray);
-    }
-    if (isSpecialCharacter) {
-      optionsArray.push(specialCharacterArray);
+  const confirmPreference = (answer, array) => {
+    if (answer) {
+      optionsArray.push(array);
+      return;
     }
   };
 
@@ -146,12 +144,6 @@ function generatePassword() {
   confirmPreference(isUppercase, uppercaseArray);
   confirmPreference(isNumbers, numbersArray);
   confirmPreference(isSpecialCharacter, specialCharacterArray);
-
-  // Ensuring at least one type of character is chosen
-  if (!isLowercase && !isUppercase && !isNumbers && !isSpecialCharacter) {
-    alert("At least one character type is required to generate a password!");
-    return "Try again and choose 1 or more character types.";
-  }
 
   // Creating the password by picking random characters out of the arrays the user has chosen
   // Will use math function to do so
