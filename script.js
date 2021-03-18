@@ -1,5 +1,5 @@
 // Assignment Code
-const generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // Declaring global variables
 const lowercaseArray = [
@@ -127,7 +127,7 @@ function generatePassword() {
   // Ensuring at least one type of character is chosen
   if (!isLowercase && !isUppercase && !isNumbers && !isSpecialCharacter) {
     alert("At least one character type is required to generate a password!");
-    return "Try again and choose 1 or more character types.";
+    return (password = "Try again and choose 1 or more character types.");
   }
 
   // Collecting user preferences
@@ -153,6 +153,7 @@ function generatePassword() {
   for (let i = 0; i <= passwordLength; i++) {
     password += optionsArray[Math.floor(Math.random() * optionsArray.length)];
   }
+
   // Return our created password
   return password;
 }
