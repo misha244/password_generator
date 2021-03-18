@@ -114,10 +114,10 @@ function generatePassword() {
 
   // Confirming character type selection
   const isLowercase = confirm(
-    "Would you like your password to include lowercase?"
+    "Would you like your password to include lowercase characters?"
   );
   const isUppercase = confirm(
-    "Would you like your password to include uppercase?"
+    "Would you like your password to include uppercase characters?"
   );
   const isNumbers = confirm("Would you like your password to include numbers?");
   const isSpecialCharacter = confirm(
