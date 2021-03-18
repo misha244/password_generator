@@ -100,7 +100,7 @@ function generatePassword() {
 
   // Asking for a password length
   const inputPasswordLength = prompt(
-    "Please enter the length you'd like for your password"
+    "Please enter the length you'd like for your password:"
   );
 
   // Converting the input length from a string to an integer
