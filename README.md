@@ -2,19 +2,17 @@
 
 ## Table of content :
 
-- [Password Generator](#password-generator)
-- [Table of content :](#table-of-content-)
-- [Project Link](#project-link)
-- [About my Project](#about-my-project)
-- [Screenshots](#screenshots)
-- [Fin.](#fin)
+- [_Table of content_ :](#table-of-content-)
+- [_Project Link_](#project-link)
+- [_About my Project_](#about-my-project)
+- [_Screenshots_](#screenshots)
 
 ## Project Link
 
-[See my password generator here](https://misha244.github.io/password_generator/)
+[_See my password generator here_](https://misha244.github.io/password_generator/)
 
 ## About my Project
 
 ## Screenshots
 
-## Fin.
+## Fin
