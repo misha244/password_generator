@@ -95,7 +95,7 @@ const specialCharacterArray = [
 ];
 
 function generatePassword() {
-  // Create a variable to store our generated password
+  // Creating a variable to store the generated password
   var password = "";
 
   // Asking for a password length
@@ -145,14 +145,14 @@ function generatePassword() {
   confirmPreference(isNumbers, numbersArray);
   confirmPreference(isSpecialCharacter, specialCharacterArray);
 
-  // Creating the password by picking random characters out of the chosen arrays
   // Creating a loop that will generate characters from the chosen arrays, using the chosen length for the password.
+  // Using a Math function to pick characters from the chosen arrays on a random basis
 
   for (let i = 0; i <= passwordLength; i++) {
     password += optionsArray[Math.floor(Math.random() * optionsArray.length)];
   }
 
-  // Return our created password
+  // Returning our created password
   return password;
 }
 
