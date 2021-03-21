@@ -15,4 +15,16 @@
 
 ## Screenshots
 
+#### Landing Page
+
+![Landing-page](assets/screenshots/landing.png)
+
+#### Generated Password example
+
+![Generated](assets/screenshots/password.png)
+
+#### Error message - Invalid Length
+
+![Error-1]()
+
 ## Fin
