@@ -51,6 +51,6 @@ A list of what I did to build the password generator:
 
 #### Error Message - No Type Selected
 
-![Error-2](assets/screenshots/error-length.png)
+![Error-2](assets/screenshots/error-type.png)
 
 ## Fin
